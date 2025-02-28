@@ -13,7 +13,7 @@ app.get("/", (req: Request, res: Response) => {
 	res.send("API Running");
 });
 
-app.use("/User", userRoutes.getRouter());
+app.use("/Model", userRoutes.getRouter());
 
 
 app.listen(port, () => {

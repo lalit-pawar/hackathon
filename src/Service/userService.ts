@@ -9,7 +9,7 @@ class UserService implements IUserService {
     async getFilterData(body: aPIRequest): Promise<{ allFilteredData: any[] }> {
         try {
             const apiUrl = "https://carrier-model-api.onrender.com/chat";
-            const response: any = await axios.post(apiUrl, body);
+            const response: any = await axios.post(apiUrl, body.question);
 
             if (response?.data?.data) {
                 return { allFilteredData: response.data.data };

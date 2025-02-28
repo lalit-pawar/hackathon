@@ -14,7 +14,7 @@ class UserRoutes {
 	}
 
 	private configureRoutes() {
-		this.router.post("/register", (req, res) => this.userController.getFilterData(req, res));
+		this.router.post("/getmodelResponse", (req, res) => this.userController.getFilterData(req, res));
 	}
 
 	getRouter(): Router {
