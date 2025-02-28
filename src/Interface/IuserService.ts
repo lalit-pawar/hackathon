@@ -1,7 +1,7 @@
-import { ParameterDTO, loginDTO, UserResponse } from "../DTO/UserDto";
+import {aPIRequest} from "../DTO/allDTO";
 interface IUserService {
-	registerUser(body: ParameterDTO): Promise<String>;
-	loginUser(body: loginDTO): Promise<UserResponse | string>;
+	getFilterData(body: aPIRequest): Promise<{allFilteredData : any[]}>;
+	// chatHistory (body : Request) : Promise <{chatHistory : any{}}>;
 }
 
 export default IUserService;
